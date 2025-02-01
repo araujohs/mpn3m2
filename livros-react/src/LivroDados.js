@@ -30,18 +30,18 @@ const LivroDados = () => {
 
     // f) Método incluir
     const incluir = (event) => {
-        event.preventDefault(); // Elimina comportamento padrão
+        event.preventDefault();
 
         const novoLivro = {
-            codigo: 0, // Código inicializado como zero
+            codigo: 0,
             codEditora: codEditora,
             titulo: titulo,
             resumo: resumo,
-            autores: autores.split('\n'), // Autores separados por linha
+            autores: autores.split('\n'),
         };
 
-        controleLivros.incluir(novoLivro); // Adiciona o livro ao controlador
-        navigate('/'); // Navega para a página de listagem (raiz)
+        controleLivros.incluir(novoLivro);
+        navigate('/');
     };
 
     // g) Retorno do componente

@@ -29,7 +29,7 @@ export class ControleLivros {
     private livros: Array<Livro>;
 
     constructor() {
-        this.livros = livros; // Inicializa com o vetor de livros
+        this.livros = livros;
     }
 
     // d) Implementar o método obterLivros, com o retorno do vetor livros
@@ -40,15 +40,15 @@ export class ControleLivros {
     // e) Implementar o método incluir, que ajusta o código do livro e o adiciona ao vetor
     incluir(novoLivro: Livro): void {
         const maiorCodigo = this.livros.reduce((max, livro) => Math.max(max, livro.codigo), 0);
-        novoLivro.codigo = maiorCodigo + 1; // Incrementa o maior código existente
-        this.livros.push(novoLivro); // Adiciona o novo livro ao vetor
+        novoLivro.codigo = maiorCodigo + 1;
+        this.livros.push(novoLivro);
     }
 
     // f) Implementar o método excluir, que remove o livro com base no código
     excluir(codigo: number): void {
         const indice = this.livros.findIndex((livro) => livro.codigo === codigo);
         if (indice !== -1) {
-            this.livros.splice(indice, 1); // Remove o livro pelo índice encontrado
+            this.livros.splice(indice, 1);
         }
     }
 }

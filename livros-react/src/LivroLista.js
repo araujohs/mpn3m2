@@ -49,7 +49,7 @@ const LivroLista = () => {
     // j) Método excluir
     const excluir = (codigo) => {
         controleLivro.excluir(codigo);
-        setCarregado(false); // Força o redesenho
+        setCarregado(false);
     };
 
     // k) Retorno do componente
